@@ -1,13 +1,13 @@
 /**
  * Precisamos do express para montar a API
  */
-const express = require('express');
+const express = require("express");
 
 /**
  * Precisamos de cors para não termos problemas
  * de acesso à API
  */
-const cors = require('cors');
+const cors = require("cors");
 
 /**
  * Instanciando o app com express()
@@ -58,7 +58,7 @@ function fillCandidates() {
   candidates = [
     {
       id: 1,
-      name: 'Marco Minnemann',
+      name: "Marco Minnemann",
       votes: 0,
       previousVotes: 0,
       percentage: 0,
@@ -67,7 +67,7 @@ function fillCandidates() {
 
     {
       id: 2,
-      name: 'Mike Portnoy',
+      name: "Mike Portnoy",
       votes: 0,
       previousVotes: 0,
       percentage: 0,
@@ -76,7 +76,7 @@ function fillCandidates() {
 
     {
       id: 3,
-      name: 'Neil Peart',
+      name: "Neil Peart",
       votes: 0,
       previousVotes: 0,
       percentage: 0,
@@ -121,18 +121,18 @@ function simulatePopularity() {
 /**
  * Rota padrão (/)
  */
-app.get('/', (_, res) => {
+app.get("/", (_, res) => {
   res.json({
     message:
-      'Bem-vindo ao módulo de votação!' +
-      'Acesse /votes para visualizar a votação em tempo real.',
+      "Bem-vindo ao módulo de votação!" +
+      "Acesse /votes para visualizar a votação em tempo real.",
   });
 });
 
 /**
  * Rota /votes
  */
-app.get('/votes', (_, res) => {
+app.get("/votes", (_, res) => {
   /**
    * Clonando objeto de votação e
    * realizando a ordenação a partir
